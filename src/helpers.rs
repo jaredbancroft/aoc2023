@@ -33,7 +33,6 @@ impl Args {
 pub fn read_input_from_file(args: &mut Args) -> Result<BufReader<File>> {
     let path = args.path.clone();
     let path_string = format!("{}", path.display());
-    //let path = PathBuf::from(path_string);
 
     let f: File = File::open(path)
         .with_context(|| format!("could not read file '{}'", path_string))?;
