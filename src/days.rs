@@ -13,6 +13,7 @@ mod day8;
 mod day9;
 mod day10;
 mod day11;
+mod day12;
 
 pub fn run(args: &mut Args) -> Result<()> {
     match args.day {
@@ -27,6 +28,7 @@ pub fn run(args: &mut Args) -> Result<()> {
         9 => day9::run(args).with_context(|| "Error with day 9")?,
         10 => day10::run(args).with_context(|| "Error with day 10")?,
         11 => day11::run(args).with_context(|| "Error with day 11")?,
+        12 => day12::run(args).with_context(|| "Error with day 12")?,
         _ => panic!(),
     }
 

@@ -9,18 +9,18 @@ const EXPANSION_COEFFICIENT_PART_1: i64 = 2;
 const EXPANSION_COEFFICIENT_PART_2: i64 = 1000000;
 
 pub fn run(args: &mut Args) -> Result<()> {
-    info!(target: "Day 1", "Running...");
-    info!(target: "Day 1", "Parsing input from file");
+    info!(target: "Day 11", "Running...");
+    info!(target: "Day 11", "Parsing input from file");
 
     let reader = helpers::read_input_from_file(args)
         .with_context(|| "Problem with buffered file read")?;
 
-    info!(target: "Day 1", "Solving...");
+    info!(target: "Day 11", "Solving...");
 
     let mut total_part_1 = 0;
     let mut total_part_2 = 0;
 
-    let mut galaxy_location: Vec<(usize, usize)> = Vec::new(); //location is (row, column)
+    let mut galaxy_location: Vec<(usize, usize)> = Vec::new();
     let mut horizontal_null_space: HashMap<usize, bool> = HashMap::new();
     let mut vertical_null_space: HashMap<usize, bool> = HashMap::new();
    
